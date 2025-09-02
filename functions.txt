@@ -7,7 +7,7 @@ local function _CreateStash(stashId, label, slots, maxweight)
 end
 exports('CreateStash', _CreateStash)
 
--- αντικατάστησε την _SaveStashItems με αυτή
+
 local function _SaveStashItems(stashId, items)
     Inventories[stashId] = Inventories[stashId] or { items = {}, isOpen = false }
 
@@ -56,3 +56,4 @@ local function _OpenStash(src, stashId, data)
     TriggerClientEvent('qb-inventory:client:openInventory', src, Player.PlayerData.items, formatted)
 end
 exports('OpenStash', _OpenStash)
+
